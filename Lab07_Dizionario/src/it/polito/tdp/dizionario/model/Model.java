@@ -7,6 +7,7 @@ import org.jgrapht.Graphs;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
+import org.jgrapht.traverse.BreadthFirstIterator;
 
 import it.polito.tdp.dizionario.db.WordDAO;
 
@@ -83,4 +84,80 @@ public class Model {
 		else
 			return false;
 	}
+	
+	
+	/*metodo JGraphT*/
+	
+//	public List<String> findAllNeighbours(String s){
+//		
+//		List<String> vicini = new ArrayList<String>();
+//		BreadthFirstIterator<String, DefaultEdge> bfv = new BreadthFirstIterator<>(grafo, s);       metodo JGraphT
+//		
+//		while(bfv.hasNext()){
+//			vicini.add(bfv.next());
+//		}
+//		
+//		return vicini;
+//	}
+	
+	
+	 /*metodo recursion*/
+	
+//	public List<String> findAllNeighbours(String s){
+//		
+//		if(!grafo.containsVertex(s)){
+//			return null;
+//		}
+//		
+//		List<String> vicini = new ArrayList<String>();
+//		vicini.add(s);
+//		this.recursive(vicini, s);
+//		
+//		return vicini;
+//	}
+//    private void recursive(List<String> vicini, String s) {
+//	
+//    	List<String> neighbours = Graphs.neighborListOf(grafo, s);
+//    	
+//    	
+//    	for(String x : neighbours){
+//    		
+//    		if(!vicini.contains(x)){
+//    			vicini.add(x);
+//    			this.recursive(vicini, x);
+//    		}
+//    	}
+//   }
+	
+	
+	/*metodo iterativo*/
+	
+//	public List<String> findAllNeighbours(String s){
+//		
+//		if(!grafo.containsVertex(s)){
+//			return null;
+//		}
+//			
+//		List<String> daVisitare = new ArrayList<String>();
+//		List<String> visitati = new ArrayList<String>();;
+//		
+//		daVisitare.addAll(displayNeighbours(s));		
+//		
+//		while(daVisitare.size()!=0){
+//			
+//			visitati.add(daVisitare.get(0));
+//			String t = daVisitare.remove(0);
+//			
+//			for(String x : displayNeighbours(t)){
+//				if(!daVisitare.contains(x) && !visitati.contains(x))
+//					daVisitare.add(x);
+//			}
+//		}
+//		
+//		return visitati;
+//	}
+	
+	
+	
+	
 }
