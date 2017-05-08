@@ -19,7 +19,7 @@ public class TestModel {
 		System.out.println(model.findMaxDegree());
 		
 		System.out.println("Cerco tutti i vicini di casa:");
-		System.out.println(model.findAllNeighbours("casa"));
+		//System.out.println(model.findAllNeighbours("casa"));
 	}
 
 }
